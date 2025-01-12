@@ -5,9 +5,9 @@ import Gas_Compressibility_Factor as Gas_Comp
 import Gas_Formation_Volume_Factor as Gas_FVF
 
 if __name__ == '__main__':
-    oil = Fluid.Fluid(37, 0.7)
+    oil = Fluid.Fluid(37, 0.68)
 
-    pressure = 1000
+    pressure = 1783
     temp = 617.67
     oil_api = oil.oil_api
     sg_gas = oil.sg_gas
@@ -17,4 +17,4 @@ if __name__ == '__main__':
     Z = Gas_Comp.carnahan_starling_hs_eos(pressure, temp, sg_gas)
     Bg = Gas_FVF.gas_formation_volume_factor(pressure, temp, Z)
 
-    print(Bg)
+    print(Rs)
