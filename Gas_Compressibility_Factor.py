@@ -51,16 +51,18 @@ def carnahan_starling_hs_eos(pressure: float, temp: float, sg_gas: float) -> flo
 
     # Compute the reduced density parameter Rho Hat (rho_h) using Newton-Raphson Method
     rho_h_conv: float = 1.0
-    rho_h_i: float = 0.8
-    tol = 0.001  # Tolerance
+    rho_h_i: float = 0.01
+    tol: float = 0.001  # Tolerance
     rho_h: float = rho_h_i
     for i in range(100):
         # Calculate the reduced density functions using the Hall-Yarborough Method
         f1_rho_h: float = -alpha * pressure_pr + (
                 rho_h + np.square(rho_h) + np.power(rho_h, 3) - np.power(rho_h, 4)) / np.power(1 - rho_h, 3)
         f2_rho_h: float = -(14.76 * theta - 9.76 * np.square(theta) + 4.58 * np.power(theta, 3)) * np.square(rho_h)
-        f3_rho_h: float = (90.7 * theta - 242.2 * np.square(theta) + 42.4 * np.power(theta, 3)) * np.power(rho_h,
-                                                                                                           2.18 + 2.82 * theta)
+        # f3_rho_h: float = (90.7 * theta - 242.2 * np.square(theta) + 42.4 * np.power(theta, 3.0)) * np.power(rho_h,
+        #                                                                                                      2.18 + 2.82 * theta)
+        f3_rho_h: float = (90.7 * theta - 242.2 * theta ** 2 + 42.4 * theta ** 3) * rho_h ** (2.18 + 2.82 * theta)
+
         # Calculate the derivative of the reduced density functions
         f1_dash_rho_h: float = (1 + 4 * rho_h + 4 * np.square(rho_h) - 4 * np.power(rho_h, 3) + np.power(rho_h,
                                                                                                          4)) / np.power(
@@ -78,6 +80,6 @@ def carnahan_starling_hs_eos(pressure: float, temp: float, sg_gas: float) -> flo
             rho_h_conv = rho_h_next
             break
         rho_h = rho_h_next
-
     compressibility: float = alpha * pressure_pr / rho_h_conv
+
     return compressibility

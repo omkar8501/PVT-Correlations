@@ -58,9 +58,9 @@ def vasquez_beggs_gas_solubility(pressure: float, temp: float, oil_api: float, s
         Parameters:
         ----------
         pressure : float
-            Pressure of the fluid in psia
+            Pressure of the oil in psia
         temp : float
-            Temperature of the fluid in degrees Rankine
+            Temperature of the oil in degrees Rankine
         oil_api : float
             API gravity of the oil, indicating its density (°API)
         sg_gas : float
@@ -86,8 +86,8 @@ def vasquez_beggs_gas_solubility(pressure: float, temp: float, oil_api: float, s
         Example:
         --------
         >>> vasquez_beggs_gas_solubility(pressure=1000, temp=620, oil_api=35, sg_gas=0.7, p_bubble=1500, p_sep=114.7, t_sep=520)
-
-        """
+        175.0755
+    """
 
     # Coefficients used in Vasquez-Beggs Correlation
     coeff_heavy: List[float] = [0.0362, 1.0937, 25.724]
