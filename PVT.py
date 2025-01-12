@@ -5,16 +5,18 @@ import Gas_Compressibility_Factor as Gas_Comp
 import Gas_Formation_Volume_Factor as Gas_FVF
 
 if __name__ == '__main__':
-    oil = Fluid.Fluid(37, 0.68)
+    oil = Fluid.Fluid(27.3, 0.848)
 
-    pressure = 1783
-    temp = 617.67
+    pressure = 4253.7
+    temp = 639.67
     oil_api = oil.oil_api
     sg_gas = oil.sg_gas
 
-    Rs = Gas_Sol.standings_gas_solubility(pressure, temp, oil_api, sg_gas)
-    Bo = Oil_FVF.standings_oil_fvf(Rs, temp, oil_api, sg_gas)
-    Z = Gas_Comp.carnahan_starling_hs_eos(pressure, temp, sg_gas)
-    Bg = Gas_FVF.gas_formation_volume_factor(pressure, temp, Z)
+    # Rs = Gas_Sol.standings_gas_solubility(pressure, temp, oil_api, sg_gas)
+    # Bo = Oil_FVF.standings_oil_fvf(Rs, temp, oil_api, sg_gas)
+    # Z = Gas_Comp.carnahan_starling_hs_eos(pressure, temp, sg_gas)
+    # Bg = Gas_FVF.gas_formation_volume_factor(pressure, temp, Z)
 
-    print(Rs)
+    Rs_vb = Gas_Sol.vasquez_beggs_gas_solubility(pressure, temp, oil_api, sg_gas, 4253.7, 99.7, 632.67)
+
+    print(Rs_vb)

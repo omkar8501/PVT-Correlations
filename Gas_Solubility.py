@@ -1,4 +1,5 @@
 import numpy as np
+from typing import List
 
 
 def standings_gas_solubility(pressure: float, temp: float, oil_api: float, sg_gas: float) -> float:
@@ -44,8 +45,8 @@ def standings_gas_solubility(pressure: float, temp: float, oil_api: float, sg_ga
     return solubility
 
 
-def vasquez_beggs_gas_solubility(pressure: float, temp: float, oil_api: float, sg_gas: float, p_sep: float,
-                                 t_sep: float) -> float:
+def vasquez_beggs_gas_solubility(pressure: float, temp: float, oil_api: float, sg_gas: float, p_bubble: float,
+                                 p_sep: float, t_sep: float) -> float:
     """
         Calculates the gas solubility (Rs) in oil using Vasquez-Begg's Correlation.
 
@@ -64,6 +65,8 @@ def vasquez_beggs_gas_solubility(pressure: float, temp: float, oil_api: float, s
             API gravity of the oil, indicating its density (°API)
         sg_gas : float
             Specific gravity of the gas relative to air
+        p_bubble: float
+            Bubble point pressure of the oil in psia
         p_sep : float
              Actual pressure of the separator in psia
         t_sep : float
@@ -82,6 +85,21 @@ def vasquez_beggs_gas_solubility(pressure: float, temp: float, oil_api: float, s
 
         Example:
         --------
-        >>> vasquez_beggs_gas_solubility(pressure=2000, temp=600, oil_api=35, sg_gas=0.8)
-        550.32
+        >>> vasquez_beggs_gas_solubility(pressure=1000, temp=620, oil_api=35, sg_gas=0.7, p_bubble=1500, p_sep=114.7, t_sep=520)
+
         """
+
+    # Coefficients used in Vasquez-Beggs Correlation
+    coeff_heavy: List[float] = [0.0362, 1.0937, 25.724]
+    coeff_light: List[float] = [0.0178, 1.187, 23.931]
+    coeff: List[float] = coeff_heavy if oil_api <= 30 else coeff_light
+
+    # Adjust the gas gravity for separator conditions
+    sg_gas_sep: float = sg_gas * (1 + 5.912 * 0.00001 * oil_api * (t_sep - 460.67) * np.log10(p_sep / 114.7))
+
+    # Calculate the gas solubility using the Vasquez-Beggs Correlation
+    # Use given pressure for saturated oil and bubble point pressure for under-saturated oil
+    gas_sol: float = coeff[0] * sg_gas_sep * np.power(min(pressure, p_bubble), coeff[1]) * np.exp(
+        coeff[2] * oil_api / temp)
+
+    return gas_sol
