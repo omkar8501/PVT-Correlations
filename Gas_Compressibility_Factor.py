@@ -3,7 +3,7 @@ import numpy as np
 
 def carnahan_starling_hs_eos(pressure: float, temp: float, sg_gas: float) -> float:
     """
-    Calculates the compressibility of the gas at a given pressure and temp_rerature using the Hall-Yarborough method
+    Calculates the compressibility of the gas at a given pressure and temperature using the Hall-Yarborough method
 
     The Carnahan-Starling Hard Sphere equation of state (EoS) is a model that describes the behavior of fluids by
     considering the molecules as hard spheres with finite volume. When solved using the Hall-Yarborough method,
@@ -11,11 +11,11 @@ def carnahan_starling_hs_eos(pressure: float, temp: float, sg_gas: float) -> flo
 
     Parameters:
     ----------
-    pressure: float
+    pressure : float
         Pressure of the gas in psia
-    temp: float
+    temp : float
         Temperature of the gas in degree Rankine
-    sg_gas: float
+    sg_gas : float
         Specific gravity of the gas relative to air
 
     Returns:
@@ -29,8 +29,8 @@ def carnahan_starling_hs_eos(pressure: float, temp: float, sg_gas: float) -> flo
 
     Example:
     --------
-    >>>carnahan_starling_hs_eos(pressure=1000, temp=500, sg_gas=0.7)
-    0.7384
+    >>> carnahan_starling_hs_eos(pressure=1000, temp=500, sg_gas=0.7)
+    np.float64(0.7383622374678762)
     """
 
     # Standing's equation to Calculate critical Pressure and temperature
