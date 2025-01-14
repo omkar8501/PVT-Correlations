@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1d8fa34-bc05-42a4-a621-f85d0e0b62a6" name="Changes" comment="Added the Lee-Gonzalez-Eakin Method for gas viscosity">
-      <change afterPath="$PROJECT_DIR$/Oil_Visocsity.py" afterDir="false" />
+    <list default="true" id="b1d8fa34-bc05-42a4-a621-f85d0e0b62a6" name="Changes" comment="Started the correlation for calculating oil viscosity">
+      <change afterPath="$PROJECT_DIR$/Constants.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gas_Density.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Oil_Density.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PVT_Table.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gas_Viscosity.py" beforeDir="false" afterPath="$PROJECT_DIR$/Gas_Viscosity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oil_Visocsity.py" beforeDir="false" afterPath="$PROJECT_DIR$/Oil_Visocsity.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +57,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python tests.Doctests in Gas_Compressibility_Factor.executor": "Run",
+    "Python tests.Doctests in Gas_Density.executor": "Run",
     "Python tests.Doctests in Gas_Formation_Volume_Factor.executor": "Run",
     "Python tests.Doctests in Gas_Viscosity.executor": "Run",
+    "Python tests.Doctests in Oil_Density.executor": "Run",
     "Python tests.Doctests in Oil_Formation_Volume_Factor.executor": "Run",
     "Python.PVT.executor": "Run",
     "Python.test.executor": "Run",
@@ -116,13 +123,22 @@
       <option name="project" value="LOCAL" />
       <updated>1736787323154</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Started the correlation for calculating oil viscosity">
+      <option name="closed" value="true" />
+      <created>1736791393572</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1736791393572</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added the Vasquez-Begg's Correlation for gas solubility" />
     <MESSAGE value="Completed the Vasquez-Beggs correlation for gas solubility" />
     <MESSAGE value="Added the Lee-Gonzalez-Eakin Method for gas viscosity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the Lee-Gonzalez-Eakin Method for gas viscosity" />
+    <MESSAGE value="Started the correlation for calculating oil viscosity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started the correlation for calculating oil viscosity" />
   </component>
 </project>
