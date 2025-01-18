@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1d8fa34-bc05-42a4-a621-f85d0e0b62a6" name="Changes" comment="Added setup.py file to export folder as a module in other projects">
-      <change afterPath="$PROJECT_DIR$/Correlations/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correlations/Constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fluid.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correlations/Fluid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gas_Compressibility_Factor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correlations/Gas_Compressibility_Factor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gas_Density.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correlations/Gas_Density.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gas_Formation_Volume_Factor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correlations/Gas_Formation_Volume_Factor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gas_Solubility.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correlations/Gas_Solubility.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gas_Viscosity.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correlations/Gas_Viscosity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Oil_Density.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correlations/Oil_Density.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Oil_Formation_Volume_Factor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correlations/Oil_Formation_Volume_Factor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Oil_Visocsity.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correlations/Oil_Visocsity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PVT.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correlations/PVT.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PVT_Table.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correlations/PVT_Table.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Wrappers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correlations/Wrappers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +67,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Omkar\OneDrive\Desktop\Reservoir Simulation\Simulation\PVT Correlations\Correlations" />
       <recent name="C:\Users\Omkar\OneDrive\Desktop\Reservoir Simulation\Simulation\PVT Correlations" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Omkar\OneDrive\Desktop\Reservoir Simulation\Simulation\PVT Correlations\Correlations" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -165,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737132492680</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added setup.py file to export folder as a module in other projects">
+      <option name="closed" value="true" />
+      <created>1737191851406</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1737191851406</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
