@@ -1,8 +1,6 @@
 import Fluid
 import Gas_Solubility as Gas_Sol
 import Oil_Formation_Volume_Factor as Oil_FVF
-import Gas_Compressibility_Factor as Gas_Comp
-import Gas_Formation_Volume_Factor as Gas_FVF
 
 if __name__ == '__main__':
     oil = Fluid.Fluid(35, 0.7)
